@@ -403,6 +403,9 @@ div.sk {
     .header {
         height: auto;
     }
+	.header_text {
+        width: 100%;
+    }   
 }
 
 
