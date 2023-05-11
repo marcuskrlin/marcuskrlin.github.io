@@ -368,14 +368,39 @@ div.sk {
 
 
 /*MOBILE SIZES (600px)*/
-@media only screen and (max-width:2000px) {
+
+@media only screen and (max-width:1200px) {
+    .photos { 
+    display: none; 
+    }
+}
+
+@media only screen and (max-width:1000px) {
     body {
         font-family: georgia;
     }
-    #myBtnContainer {
-        display: hide;
+    .sticky_menu {
+        display: none;
+    }
+    .grid-layout {
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: 
+        'abt abt abt'
+        'res res res'
+        'pub pub pub'
+        'cv cv cv'
+        'sk1 sk2 sk3'
+        'ct ct ct'
+        ;
+        width: 100%;
+    margin-left: 0;
+    }
+    .photos { 
+    display: none; 
     }
 }
+
 
 
 
