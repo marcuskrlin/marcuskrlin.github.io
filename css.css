@@ -1,0 +1,382 @@
+html {
+    /*May not be supported in other browsers*/
+  scroll-behavior: smooth;
+}
+
+body {
+	background-color: #FAF9F6;
+	font-family: Georgia;
+    margin: 0;
+}
+
+body.theme1 {
+    --darker: rgb(24, 38, 23);
+    --darkernav: rgb(24, 38, 23, 0.8);
+    --header: url(IMG_0720.jpg);
+    --header_pos: 0% 80%;
+    --content: rgba(234, 247, 230, 0.8);
+    background-image: url(bg_green.png);
+
+}
+
+body.theme2 {
+    --darker: rgb(93, 84, 111);
+    --darkernav: rgb(93, 84, 111, 0.8);
+    --header: url(IMG_1231.jpg);
+    --header_pos: 0% 50%;
+    --content: rgba(254, 247, 252, 0.8);
+    background-image: url(bg_pink.png);
+}
+
+body.theme3 {
+    --darker: rgb(35, 48, 63);
+    --darkernav: rgb(35, 48, 63, 0.8);
+    --header: url(boat.jpg);
+    --header_pos: 0% 80%;
+    --content: rgba(238, 248, 248, 0.8);
+    background-image: url(bg_blue.png);
+}
+
+h1, p {
+    margin: 0;
+}
+
+/*CSS GRID LAYOUT*/
+
+.grid-layout {
+    display:grid;
+    grid-template-columns: auto auto auto 350px;
+    grid-template-areas: 
+        'abt abt abt p'
+        'res res res p'
+        'pub pub pub p'
+        'cv cv cv p'
+        'sk1 sk2 sk3 p'
+        'ct ct ct p'
+        ;
+    margin-left: 180px;
+    width: calc(100%-140px);
+}
+
+.grid-layout > div.main {
+  background-color: var(--content);
+    font-family: 'Montserrat';
+    padding: 15px 40px 0 40px;
+}
+
+.grid-layout > div.photos {
+  text-align: center;
+  padding: 20px;
+}
+
+.photos { 
+    grid-area: p; 
+}
+.aboutme { 
+    grid-area: abt; 
+}
+.research { 
+    grid-area: res; 
+    text-align: center
+}
+.cv { 
+    grid-area: cv; 
+}
+.sk1 { 
+    grid-area: sk1; 
+}
+.sk2 { 
+    grid-area: sk2; 
+}
+.sk3 { 
+    grid-area: sk3; 
+}
+.pub { 
+    grid-area: pub; 
+}
+.contact { 
+    grid-area: ct; 
+    height: 400px;
+}
+
+
+/*HEADER*/
+
+.header {
+    padding: 15px;
+    background-image: var(--header);
+    background-size: cover;
+    background-position: var(--header_pos);
+    height: 550px;
+    color: var(--darker);
+}
+
+.header_text {
+    background-color: rgb(255,255,255,0.7);
+    padding: 10px;
+    width: fit-content;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+/*CONTENT FORMATTING*/
+/*Titles for different sections*/
+h2,h3 {
+    text-align: center;
+    margin: 5px;
+}
+/*Only used in CV Skills section*/
+h4 {
+    text-align: center;
+    margin: 0;
+}
+
+/*Image formatting*/
+img.inline {
+    float: left;
+    margin: 8px;
+}
+
+img.noinline {
+    float: none;
+    margin: 8px;
+}
+
+img.gallery {
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+/*Publications*/
+p.pubs {
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+
+
+/* NAV BAR */
+.sticky_menu {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width:140px;
+    float: left;
+    margin-top: 10px;
+    padding-left: 1.4%;
+}
+
+div.nav, div.navtop, div.subnav {
+    width: 100px;
+    text-align: center;
+    padding: 15px 10px 15px 10px;
+    font-family: Verdana;
+    font-size: 13px;
+    font-weight:bolder;
+}
+
+div.nav {
+    border: 2px solid var(--darkernav);
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+div.subnav {
+    border: 2px solid var(--darkernav);
+    margin: 20px 0 0 40px;
+    width: 60px;
+    text-align: center;
+}
+
+a.nav {
+    text-decoration: none;
+    color: var(--darkernav);
+}
+
+
+/*ALL THE STUFF FOR CV*/
+:root {
+    --tlcolor: darkgray;
+}
+
+/*Timeline Formatting*/
+
+body {
+    font-family: Georgia;
+}
+
+/*Timeline Formatting*/
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 5px 0 0 180px;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--tlcolor);
+    top: 0;
+    bottom: 0;
+}
+
+/*formatting for text inside of timeline*/
+.timeline h3 {
+    text-align: left;
+    margin: 0;
+}
+.timeline p {
+    font-weight: 700;
+}
+p.desc {
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 200;
+}
+
+/* Container around content */
+.content {
+    padding: 0 0 1px 18px;
+    top: 5px;
+    position: relative;
+    width: 95%;
+    left: 10px;
+    margin-top: 10px;
+    font-family: montserrat;
+}
+/* The circles on the timeline */
+.content::after {
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 13px;
+    left: -18px;
+  background-color: white;
+  border: 2px solid var(--tlcolor);
+  top: 2px;
+  border-radius: 50%;
+  z-index: 1;
+}
+/*Dates of timeline*/
+.date {
+    position: absolute;
+    width: 150px;
+    left: -180px;
+    top: 2px;
+    color: var(--tlcolor);
+    font-family: monospace;
+    font-size: 14px;
+    text-align: right;
+}
+
+/*Sub content formatting*/
+.subcontent {
+    top: 5px;
+    position: relative;
+    left: 30px;
+    font-family: montserrat;
+    margin-bottom: 13px;
+}
+.subcontent::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: -62px;
+    background-color: var(--tlcolor);
+    top: 2px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.subcontent .date {
+    left: -210px;
+    width: 132px;
+    top: 0;
+    font-size: 12px;
+}
+
+/*Button Filtering Format*/
+.btn {
+    padding: 13px 20px 13px;
+    margin: 0 15px 20px 15px;
+      z-index: 3;
+    outline: 1px solid black;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: verdana;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.btn:after {
+  content: "";
+  background-color: coral;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+.btn:hover:after {
+  top: 0px;
+  left: 0px;
+}
+.btn.b6 {
+    border: 0;
+}
+.btn.b6:after {
+  top: 0px;
+  left: 0px;
+  background-color: lavender;
+
+}
+/*Button Container centering*/
+#myBtnContainer {
+    text-align: center;
+}
+
+/*ACTIVE BUTTON COLORS*/
+.btn.active:after {
+    top: 0px;
+    left: 0px;
+}
+.btn.active.b2:after {
+    background-color: palegreen;   
+}
+.btn.active.b3:after {
+    background-color: pink;   
+}
+.btn.active.b4:after {
+    background-color: powderblue;   
+}
+.btn.active.b5:after {
+    background-color: lightgoldenrodyellow;   
+}
+
+
+
+/*Skills section*/
+div.sk {
+    padding: 0 0 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

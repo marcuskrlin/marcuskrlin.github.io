@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--CSS and JS -->
+	<link rel="stylesheet" type="text/css" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	
+    <title>Marcus Lin</title>
+</head>
+<body>
+    <!--JAVASCRIPT -->
+    <script src="js.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<div class="header">
+    <div class="header_text">
+        <h1>Marcus K. R. Lin</h1>
+        <p>Doing some science some of the times.</p>
+        <p>Current Location: <i>Los Angeles, California, USA</i></p>
+    </div>
+</div>
+<div class="sticky_menu">
+	<a href="" class="nav">
+        <div class = "navtop">
+        SEND ME BACK UP!
+        </div>
+    </a>
+	<a href="#about_me" class="nav">
+        <div class = "nav">
+        ABOUT ME
+        </div>
+    </a>
+	<a href="#research" class="nav">
+        <div class = "nav">
+        RESEARCH
+        </div>
+    </a>
+        <a href="#pubs" class="nav">
+            <div class = "subnav">
+            - PUBS
+            </div>
+        </a>
+	<a href="#cv" class="nav">
+        <div class = "nav">
+        CV
+        </div>
+    </a>
+        <a href="#exp" class="nav">
+            <div class = "subnav">
+            - EXP
+            </div>
+        </a>
+        <a href="#skills" class="nav">
+            <div class = "subnav">
+            - SKILL
+            </div>
+        </a>
+	<a href="#contact" class="nav">
+        <div class = "nav">
+        CONTACT
+        </div>
+    </a>
+</div>
+    <div class="grid-layout">
+        <div class="photos">
+            <img src="IMG-2558.JPEG" class = "gallery" alt="Marcus Holding Kelp">
+            <img src="IMG_1271.jpg" class = "gallery" alt="Goechem work Tina">
+            <img src="IMG_2729.JPG" class = "gallery" alt="Diving mada">
+            <img src="IMG-7640.jpg" class = "gallery" alt="Cleaning Tanks">
+            <img src="ski.jpg" class = "gallery" alt="Top of Lake Louise">
+            <img src="IMG_5232.JPG" class = "gallery" alt="Snake (hand only)">
+        </div>
+        <div class="aboutme main" id="about_me">
+            <h2>About Me</h2>
+            <img class="inline" src="aboutme.png" style="height: 280px">
+            <p>Hi! My name's Marcus and I'm a biologist/geochemist that really likes seaweed (peep the background)!</p>
+            <br>
+            <p>I've done research in a number of different environments working on a number of different species. From the secondary forests in Madagascar; the Central Pacific Ocean in French Polynesia; the Western Pacific in California; to (hopefully!) the Atlantic in the Eastern Canadian Arctic, I've worked on herpetofauna (reptiles/amphibians); lepidopterans (butterflies/moths); stony corals; estuarine fish; and most importantly— macroalgae!</p>
+            <br>
+            <p>I graduated from the University of California, Los Angeles in 2022 with a B.Sc. in Ecology, Evolution, & Behavior and will be pursuing a M.Sc. in Earth & Planetary Sciences at McGill University. I'm currently co-advised by Dr. Nagissa Mahmoudi and Dr. Rowan Barrett. Feel free to check out my CV down below for my actual work and research experience!</p>
+            <br>
+            <p>Aside from science (or science-adjacent things), I am a huge skier; am an amateur web developer (I built this from scratch! - I'm too cheap to pay squarespace), was a barback (baby bartender), have (intensely) dabbled as an aquarist/aquaculturist, and love teaching others about marine science! I'm very much a jack of all trades, master of none and am always looking for opportunities to flex my non-science muscles once in a while. Reach out if you'd ever like to chat!</p>
+        </div>  
+        <div class="research main" id="research">
+            <h2>Research</h2>
+            <p>Still figuring it out (for the M.Sc. at least)! I've worked on nitrogen geochemical cycling in marine environments, coastal geomorphology in California, and some proteomics analyses. More details below in the CV!</p>
+            <br>
+            <img src="IMG_0793.jpg"  style="height: 200px;">
+            <img src="IMG_0043.jpg"  style="height: 200px;">
+            <img src="IMG_2231.jpg"  style="height: 200px;">
+            <img src="IMG_2487.jpg"  style="height: 200px;">
+        </div>
+        <div class="pub main" id="pubs">    
+            <h3>Publications</h3>
+            <p style="font-size: 10px; text-align: center">*indicates co-first authorship</p>
+            <p class = "pubs">Barbee, B.E.*, <b>Lin, M.K.R.*</b>, Min, I.A.*, Takenami, A.M.*, Philson, C.S. and Blumstein, D.T. (2022), Nutrient enrichment alters risk assessment in Giant clams. J Zool. <a href="https://doi.org/10.1111/jzo.13030">https://doi.org/10.1111/jzo.13030</a></p>
+        </div>  
+        <div class="cv main" id="cv">
+            <h2>Curriculum Vitae</h2>
+            <h3 id="exp">Work & Research Experience</h3>
+                <!--Experience Filtering CV-->
+                <div id="myBtnContainer">
+                  <button class="btn active b1" onclick="filt('all')"> Show Me Everything!</button>
+                  <button class="btn b2" onclick="filt('bio')"> Biology</button>
+                  <button class="btn b3" onclick="filt('chem')"> Geochemistry</button>
+                  <button class="btn b4" onclick="filt('aqua')"> Aquaculture & Outreach</button>
+                  <button class="btn b5" onclick="filt('misc')"> Non-Science!</button>
+                  <button class="btn b6" onclick="filt('texty')"> Toggle Descriptions</button>
+                </div>
+                <div class="timeline">
+                    <!-- McGill -->
+                    <div class="content bio chem">
+                        <div class = "date">
+                            <p>FUTURE</p>
+                        </div>
+                        <h3>McGill University (M.Sc.)</h3>
+                        <p>Nagissa Mahmoudi & Rowan Barrett Lab</p>
+                        <p class="desc">Will be figuring out what I'm doing soon...</p>
+                    </div>
+                    <!-- USC -->
+                    <div class="content bio aqua">
+                        <div class = "date">
+                            <p>NOW - JUL 2022</p>
+                        </div>
+                        <h3>University of Southern California</h3>
+                        <p >Sergey Nuzhdin Lab - Lab Manager</p>
+                        <p class = "desc">With Dr. Sergey Nuzhdin, I acted as the lab manager for both his molecular biology lab and off-campus aquaculture facility. I was responsible for general lab maintenance, inventory, and safety while maintaining kelp-specific projects. During my time, I managed one of the first germplasm collections ("seed bank") for <i>Macrocystis pyrifera</i> in Southern California; temporarily managed the kelp elevator project investigating experimental cycling giant kelp from nutrient-rich deep water to photic surface as an offshore farm proof of concept; and worked on selectively breeding then growing out sporeless (non-reproductive) cultivars of giant kelp on-land. With our aquaculture facility housed at AltaSea, I participated in education programs (85+ students) and interviews on our work while mentoring four paid undergraduate researchers (who are all super sick!).</p>
+                    </div>
+                    <!-- UCLA -->
+                    <div class="content bio chem misc">
+                    <div class = "date">
+                        <p>JUN 2022 - SEP 2018</p>
+                    </div>
+                    <h3>University of California, Los Angeles (B.Sc.)</h3>
+                        <!-- Tina Treude -->
+                        <div class="subcontent bio chem">
+                            <div class="date">
+                                JUN 2022 - JAN 2020
+                            </div>
+                            <p >Tina Treude Oceanography Lab - Research Assistant</p>
+                            <p class="desc">In Dr. Tina Treude's lab, I worked primarily with David Yousavich, Ph.D.(c), and helped study the fate of nitrate and sulfur compounds in the Salton Sea, an anoxic lake, while acting as a technician. I performed sequential nitrate/nitrite determination (and helped developed a method for doing so in small quantities and at low detection limits), phosphate, alkalinity, radiolabeled sulfate reduction measurements. I also partook in several field sampling trips and boat trips to collect cores, later preparing them in lab.</p>
+                        </div>
+                        <!-- Dave Jacobs -->
+                        <div class="subcontent bio chem">
+                            <div class="date">
+                                JUN 2022 - AUG 2019
+                            </div>
+                            <p >David K. Jacobs Lab - Undergraduate Researcher</p>
+                            <p class="desc">For several years, I worked with Dr. David Jacobs on a number of different projects— primarily on coastal geomorphology and some geochemistry. I classified geomorphological processes and features of coastal estuaries, lagoons, and watersheds in California from aerial imagery and digital elevation models. This work was then translated over to understanding the geohydrology of rainwater in malibu, CA. Lastly, I worked on a collaborative project between Dr. Jacobs and Dr. Kevin Mckeegan on exploring Secondary Ion Mass Spectrometry (SIMS) on fish otoliths as environmental geochemical markers of lagoon conditions through time.</p>
+                        </div>
+                        <!-- Dashew -->
+                        <div class="subcontent misc">
+                            <div class="date">
+                                JUN 2022 - SEP 2018
+                            </div>
+                            <p >Dashew Center for International Students & Scholars</p>
+                            <p class="desc">I started working for the Dashew Center my freshman year of college doing events and programming geared towards international students. I coordinated the Language Exchange and International Ambassador programs while taking point on other events such as our international talent showcase and Thanksgiving food drive. Working with our supervisor, we were each responsible for budgeting, staffing, and marketing of our respective assignments, with over hundreds of participants in some programs. </p>
+                        </div>
+                        <!-- FMBQ -->
+                        <div class="subcontent bio">
+                            <div class="date">
+                                MAR 2022 - JAN 2022
+                            </div>
+                            <p >Field Marine Biology Quarter</p>
+                        <p class="desc">As part of my coursework, I partook in a field research class with Dr. Dan Blumstein and Dr. Peggy Fong in Mo'orea, French Polynesia. With Dan, we investigated the changes in antipredatory behavior in photosynthetic giant clams <i>(Tridactna maximus)</i> under nutrient enrichment. With Peggy, we began work on applying trait-based ecologicalclassification to marine macroalgae, specifically with <i>Turbinaria ornata</i>, <i>Sargassum pacificum</i>, and <i>Padina boryana</i>.</p>
+                        </div>
+                        <!-- ORCA -->
+                        <div class="subcontent aqua">
+                            <div class="date">
+                                DEC 2021 - SEP 2020
+                            </div>
+                            <p>Ocean Resources for Conservation and Advocacy (ORCA) - Founder/Chair</p>
+                            <p class="desc">To foster community in the marine sciences during the pandemic, I, along with eleven friends, started ORCA to help both marine scientists and non-scientists learn about ocean conservation and justice. Our primary work was increasing the accessibility of ocean sciences through community lead events. Personally, my favorite event was the Biden 100 Days event, where I placed the ownership of the panel into the hands of student experts. We tracked the movements from Biden's administration in his first 100 days, during which I built a ten-week curriculum on policy making, historical trends in infrastructure, and understanding legal jargon to prepare our student speakers to act as experts. This work was important to many of us as it was the first presidential election we had partaken in. </p>
+                        </div>
+                        <!-- Jeana Drake -->
+                        <div class="subcontent bio">
+                            <div class="date">
+                                JUN 2021 - OCT 2020
+                            </div>
+                            <p>Jeana Drake - Research Assistant</p>
+                            <p class="desc">Working with my long-time mentor, I assisted Dr. Drake on performing basic local alignment (BLAST) of whole-proteome data from the stony coral species <i>Stylophora pistillata</i>. I also performed the gene ontology (GO) enrichment and KEGG mapping analyses. This dataset was exploring the upregulation and downregulation of biomineralizing and toxin proteins across different larval stages.</p>
+                        </div>
+                        <!-- SLAGC -->
+                        <div class="subcontent bio aqua">
+                            <div class="date">
+                                JUN 2020 - SEP 2019
+                            </div>
+                            <p>Sustainable LA Grand Challenges - Research Scholar</p>
+                            <p class="desc">I worked on a project sponsored by California Parks and Recreation to study spatial and temporal distribution of crow behavior in Venice Beach, CA from anthropogenic activity. The crows were disrupting the local endangered California least tern reserve nearby and we used our data in an education campaign informing residents on how to adjust their garbage disposal habits.</p>
+                        </div>
+                    </div>
+                    <!-- Cal Sci Center -->
+                    <div class="content aqua">
+                        <div class = "date">
+                            <p>OCT 2021 - AUG 2019</p>
+                        </div>
+                        <h3>California Science Center</h3>
+                        <p >Living Collections Aquatic Husbandry Volunteer</p>
+                        <p class="desc">About once a week, I would volunteer as an aquarist (aquatic husbandry specialist) in taking care of the touch tank exhibit (sea urchins, abalones, sea stars), wet tables (crabs, shrimps, lobster - singular, perches, octopus), moon jelly exhibit, and coral fragments. I not only prepped food and fed our critters but also cleaned tanks and performed maintenance, racking up over 350 hours. This is where a lot of my aquaculture/aquarium-keeping knowledge comes from!</p>
+                    </div>
+                    <!-- Boston College -->
+                    <div class="content chem">
+                        <div class = "date">
+                            <p>SEP 2021 - JUN 2021</p>
+                        </div>
+                        <h3>Boston College</h3>
+                        <p >Wang Stable Isotope Biogeochemistry Lab - Summer Researcher</p>
+                        <p class = "desc">Over a summer, I worked with Dr. Xingchen (Tony) Wang to analyze nitrogen, carbon, and oxygen isotopes in seawater samples and coral tissue samples. Through the seawater samples, we could estimate how much of the nitrogen observed was anthropogenic runoff versus natural sources. In the stony corals, we were exploring if there was an increase in heavier nitrogen isotopes in aposymbiotic (non-photosynthesizing) corals as photosynthetic corals would internally cycle their nitrogen. I also acted as the on-site technician for the lab's isotope ratio mass spectrometer (IRMS) with a modified Gas Bench (for N2O analyses) and  Elemental Analyzer (EA).</p>
+                    </div>
+                    <!-- EMBARC Reef Check -->
+                    <div class="content aqua">
+                        <div class = "date">
+                            <p>SEP 2019 - APR 2019</p>
+                        </div>
+                        <h3>California Reef Check</h3>
+                        <p>EMBARC Teacher</p>
+                        <p class="desc">Partnering with a local whale watching company, we would take local middle and high schoolers out to the open ocean to learn about marine science (and occassionally find dolphins and whales!). I taught lessons on physical oceanography and elasmobranchs while assisting in live specimen collections of sea stars, nudibranchs, mussels, and kelp used in the marine invertebrate lesson.</p>
+                    </div>
+                    <!-- Lake Louise -->
+                    <div class="content misc">
+                        <div class = "date">
+                            <p>MAY 2018 - NOV 2017</p>
+                        </div>
+                        <h3>Lake Louise Ski Resort</h3>
+                        <p>Ski Instructor</p>
+                        <p class="desc">I was a CSIA Level 2 ski instructor and had a specialization in children education. I worked with young children and young adults looking to shred!</p>
+                    </div>
+                    <!-- MRCI -->
+                    <div class="content bio">
+                        <div class = "date">
+                            <p>NOV 2017 - JUN 2017</p>
+                        </div>
+                        <h3>Madagascar Research and Conservation Institute</h3>
+                        <p >Forestry Program Intern and Manager</p>
+                        <p class="desc">On a small island called Nosy Komba, I helped manage, then subsequently took over management, a group of 20-30 volunteers in the forest conservation program. I surveyed the biodiversity of the island's secondary forests, helped develop an agroforestry program, collected geospatial data on our sites, and trained volunteers/locals on our monitoring protocols. Included were black lemurs, herpetofauna, lepidoptera, and birds.</p>
+                    </div>
+                </div>
+            <h3 style="margin-top: 15px;" id="skills">Skills & Such</h3>
+        </div>
+        <div class="sk1 sk main">
+            <h4>Languages</h4>
+            <ul>
+                <li>Chinese - Mandarin</li>
+                <li>Chinese - Cantonese</li>
+                <li>French</li>
+            </ul>
+        </div>
+        <div class="sk2 sk main">
+            <h4>Computer Things</h4>
+            <ul>
+                <li>Programming
+                    <ul><li>R</li>
+                    <li>C++</li>
+                    <li>HTML/CSS/Javascript</li>
+                    <li>Python</li></ul>
+                </li>
+                <li>Geospatial Information Systems (GIS)
+                    <ul><li>QGIS</li>
+                    <li>ArcGIS (with Spatial Analyst Toolkit)</li></ul>
+                </li>
+            </ul>
+        </div>
+        <div class="sk3 sk main">
+            <h4>Random Skills & Certs</h4>
+            <ul>
+                <li>Diving
+                <ul><li>PADI Rescue Diver</li>
+                    <li>Basic First Aid/O2</li></ul></li>
+                <li>Canadian Ski Instructors Alliance (CSIA) Level 2
+                <ul><li>with Teaching Kids Spealization</li></ul></li>
+                
+            </ul>
+        </div>
+        <!--
+        <div class="outreach main" id="outreach">
+            <p><b>OUTREACH</b></p>
+        </div>  -->
+        <div class="contact main" id="contact">
+            <h2>Contact</h2>
+            <h3><i>I won't bite, I promise!</i></h3>
+            <p style="text-align: center; margin: 10px;">Email: marcuslin@g.ucla.edu</p>
+        </div>  
+    </div>
+
+<script>
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = document.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}    
+</script>
+</body>
+</html>
