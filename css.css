@@ -400,6 +400,9 @@ div.sk {
     .photos { 
     display: none; 
     }
+    .header {
+        height: auto;
+    }
 }
 
 
