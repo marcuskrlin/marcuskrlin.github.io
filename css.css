@@ -12,7 +12,7 @@ body {
 body.theme1 {
     --darker: rgb(24, 38, 23);
     --darkernav: rgb(24, 38, 23, 0.8);
-    --header: url(IMG_0720.jpg);
+    --header: url(IMG_0720.JPG);
     --header_pos: 0% 80%;
     --content: rgba(234, 247, 230, 0.8);
     background-image: url(bg_green.png);
@@ -22,7 +22,7 @@ body.theme1 {
 body.theme2 {
     --darker: rgb(93, 84, 111);
     --darkernav: rgb(93, 84, 111, 0.8);
-    --header: url(IMG_1231.jpg);
+    --header: url(IMG_1231.JPG);
     --header_pos: 0% 50%;
     --content: rgba(254, 247, 252, 0.8);
     background-image: url(bg_pink.png);
@@ -31,7 +31,7 @@ body.theme2 {
 body.theme3 {
     --darker: rgb(35, 48, 63);
     --darkernav: rgb(35, 48, 63, 0.8);
-    --header: url(boat.jpg);
+    --header: url(boat.JPG);
     --header_pos: 0% 80%;
     --content: rgba(238, 248, 248, 0.8);
     background-image: url(bg_blue.png);
