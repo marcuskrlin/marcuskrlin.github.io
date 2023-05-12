@@ -16,6 +16,7 @@ body.theme1 {
     --header_pos: 0% 80%;
     --content: rgba(234, 247, 230, 0.8);
     background-image: url(bg_green.png);
+    --men_bg: rgba(234, 247, 230);
 
 }
 
@@ -26,6 +27,7 @@ body.theme2 {
     --header_pos: 0% 50%;
     --content: rgba(254, 247, 252, 0.8);
     background-image: url(bg_pink.png);
+    --men_bg: rgba(254, 247, 252);
 }
 
 body.theme3 {
@@ -35,6 +37,7 @@ body.theme3 {
     --header_pos: 0% 80%;
     --content: rgba(238, 248, 248, 0.8);
     background-image: url(bg_blue.png);
+    --men_bg: rgba(238, 248, 248);
 }
 
 h1, p {
@@ -45,14 +48,15 @@ h1, p {
 
 .grid-layout {
     display:grid;
-    grid-template-columns: auto auto auto 25%;
+    grid-template-columns: 140px auto auto auto 25%;
     grid-template-areas: 
-        'abt abt abt p'
-        'res res res p'
-        'pub pub pub p'
-        'cv cv cv p'
-        'sk1 sk2 sk3 p'
-        'ct ct ct p'
+        'head head head head head'
+        'men abt abt abt p'
+        'men res res res p'
+        'men pub pub pub p'
+        'men cv cv cv p'
+        'men sk1 sk2 sk3 p'
+        'men ct ct ct p'
         ;
     max-width: calc(100%-80px);
 }
@@ -102,13 +106,16 @@ h1, p {
 /*HEADER*/
 
 .header {
+    display: block;
     padding: 15px;
 	max-width:100%;
-    background-image: var(--header);
+    background: var(--header);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: var(--header_pos);
     height: 550px;
     color: var(--darker);
+    grid-area: head;
 }
 
 .header_text {
@@ -161,11 +168,11 @@ p.pubs {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    max-width:140px;
     float: left;
-    margin-top: 10px;
-    margin-right: 15px;
+    margin: 10px 15px 0 15px;
     padding-left: 1.4%;
+    grid-area: men;
+    align-self: start;
 }
 
 div.nav, div.navtop, div.subnav {
@@ -211,7 +218,7 @@ body {
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
-    margin: 5px 0 0 20%;
+    margin: 5px 0 0 150px;
 }
 .timeline::after {
     content: '';
@@ -263,8 +270,8 @@ p.desc {
 .date {
     position: absolute;
     width: 30%;
-    max-width: 30%;
-    left: -36%;
+    max-width: 180px;
+    left: -212px;
     top: 2px;
     color: var(--tlcolor);
     font-family: monospace;
@@ -276,7 +283,7 @@ p.desc {
 .subcontent {
     top: 5px;
     position: relative;
-    left: 2%;
+    left: 10px;
     font-family: montserrat;
     margin-bottom: 13px;
 }
@@ -285,15 +292,15 @@ p.desc {
     position: absolute;
     width: 10px;
     height: 10px;
-    left: -43px;
+    left: -42px;
     background-color: var(--tlcolor);
     top: 2px;
     border-radius: 50%;
     z-index: 1;
 }
 .subcontent .date {
-    left: -45%;
-    max-width: 30%;
+    left: -234px;
+    max-width: 180px;
     top: 0;
     font-size: 12px;
     text-align: right;
@@ -371,48 +378,88 @@ div.sk {
 
 /*MOBILE SIZES (600px)*/
 
-@media only screen and (max-width:1200px) {
-    .photos { 
-    display: none; 
+@media only screen and (max-width:1250px) {
+    .grid-layout {
+    display:grid;
+    grid-template-columns: 140px auto auto auto;
+    grid-template-areas: 
+        'head head head head'
+        'men abt abt abt'
+        'men res res res'
+        'men pub pub pub'
+        'men cv cv cv'
+        'men sk1 sk2 sk3'
+        'men ct ct ct'
+        'men p p p'
+        ;
+    }
+    img.gallery {
+        float: none;
+        max-height: 200px;
+        margin: 15px;
+    }
+    .photos {
+        text-align: justify;
     }
 }
 
-@media only screen and (max-width:850px) {
+@media only screen and (max-width:950px) {
     body {
         font-family: georgia;
     }
     .sticky_menu {
+        background-color: var(--men_bg);
+        padding: 8px;
+        margin: 0;
+        z-index: 5;
+    }
+    div.nav, div.navtop {
+    max-width: 10%;
+    padding: 1% 1.5% 1% 1.5%;
+    margin: 3px 5px 0px 5px ;
+    float: left;
+    }
+    div.subnav {
         display: none;
     }
+
     .grid-layout {
     display:grid;
     grid-template-columns: auto auto auto;
     grid-template-areas: 
+        'head head head'
+        'men men men'
         'abt abt abt'
         'res res res'
         'pub pub pub'
         'cv cv cv'
         'sk1 sk2 sk3'
         'ct ct ct'
+        'p p p'
         ;
-        width: 100%;
+    max-width: 100%;
     margin-left: 0;
     }
-    .photos { 
-    display: none; 
-    }
     .date {
-        max-width: 18%;
-        left: -23%;
+        max-width: 14%;
+        left: -18%;
         top: -1%;
     }
 
     .timeline {
-        left: -5%;
+        left: -10%;
     }
     .subcontent .date {
         max-width: 15%;
         left: -24%;
+    }
+    .content {
+        max-width: 99%;
+    }
+    .grid-layout {
+        max-width: 100%;
+    }
+    .header {
     }
 
 }
