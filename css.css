@@ -165,14 +165,14 @@ p.pubs {
     max-width:140px;
     float: left;
     margin-top: 10px;
-    margin-right: 15px;
+    margin-right: 2%;
     padding-left: 1.4%;
 }
 
 div.nav, div.navtop, div.subnav {
-    width: 100px;
+    width: 5%;
     text-align: center;
-    padding: 15px 10px 15px 10px;
+    padding: 3% 1.5% 3% 1.5%;
     font-family: Verdana;
     font-size: 13px;
     font-weight:bolder;
