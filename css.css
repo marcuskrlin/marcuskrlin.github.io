@@ -161,6 +161,7 @@ p.pubs {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+	width:20%;
     max-width:140px;
     float: left;
     margin-top: 10px;
@@ -179,13 +180,13 @@ div.nav, div.navtop, div.subnav {
 
 div.nav {
     border: 2px solid var(--darkernav);
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 div.subnav {
     border: 2px solid var(--darkernav);
-    margin: 20px 0 0 40px;
+    margin: 10px 0 0 25px;
     width: 60px;
     text-align: center;
 }
