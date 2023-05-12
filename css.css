@@ -161,11 +161,10 @@ p.pubs {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-	width:20%;
     max-width:140px;
     float: left;
     margin-top: 10px;
-    margin-right: 2%;
+    margin-right: 15px;
     padding-left: 1.4%;
 }
 
@@ -212,7 +211,7 @@ body {
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
-    margin: 5px 0 0 180px;
+    margin: 5px 0 0 20%;
 }
 .timeline::after {
     content: '';
@@ -242,7 +241,7 @@ p.desc {
     padding: 0 0 1px 18px;
     top: 5px;
     position: relative;
-    width: 95%;
+    max-width: 90%;
     left: 10px;
     margin-top: 10px;
     font-family: montserrat;
@@ -263,8 +262,9 @@ p.desc {
 /*Dates of timeline*/
 .date {
     position: absolute;
-    width: 150px;
-    left: -180px;
+    width: 30%;
+    max-width: 30%;
+    left: -36%;
     top: 2px;
     color: var(--tlcolor);
     font-family: monospace;
@@ -276,7 +276,7 @@ p.desc {
 .subcontent {
     top: 5px;
     position: relative;
-    left: 30px;
+    left: 2%;
     font-family: montserrat;
     margin-bottom: 13px;
 }
@@ -285,17 +285,18 @@ p.desc {
     position: absolute;
     width: 10px;
     height: 10px;
-    left: -62px;
+    left: -43px;
     background-color: var(--tlcolor);
     top: 2px;
     border-radius: 50%;
     z-index: 1;
 }
 .subcontent .date {
-    left: -210px;
-    width: 132px;
+    left: -45%;
+    max-width: 30%;
     top: 0;
     font-size: 12px;
+    text-align: right;
 }
 
 /*Button Filtering Format*/
@@ -376,7 +377,7 @@ div.sk {
     }
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:850px) {
     body {
         font-family: georgia;
     }
@@ -400,20 +401,20 @@ div.sk {
     .photos { 
     display: none; 
     }
+    .date {
+        max-width: 18%;
+        left: -23%;
+        top: -1%;
+    }
+
+    .timeline {
+        left: -5%;
+    }
+    .subcontent .date {
+        max-width: 15%;
+        left: -24%;
+    }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
