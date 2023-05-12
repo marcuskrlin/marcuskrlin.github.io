@@ -48,15 +48,15 @@ h1, p {
 
 .grid-layout {
     display:grid;
-    grid-template-columns: 140px auto auto auto 25%;
+    grid-template-columns: 140px auto auto auto auto 25%;
     grid-template-areas: 
-        'head head head head head'
-        'men abt abt abt p'
-        'men res res res p'
-        'men pub pub pub p'
-        'men cv cv cv p'
-        'men sk1 sk2 sk3 p'
-        'men ct ct ct p'
+        'head head head head head head'
+        'men abt abt abt abt p'
+        'men res res res res p'
+        'men pub pub pub pub p'
+        'men cv cv cv cv p'
+        'men sk1 sk1 sk2 sk2 p'
+        'men ct ct ct ct p'
         ;
     max-width: calc(100%-80px);
 }
@@ -91,9 +91,7 @@ h1, p {
 .sk2 { 
     grid-area: sk2; 
 }
-.sk3 { 
-    grid-area: sk3; 
-}
+
 .pub { 
     grid-area: pub; 
 }
@@ -381,16 +379,16 @@ div.sk {
 @media only screen and (max-width:1250px) {
     .grid-layout {
     display:grid;
-    grid-template-columns: 140px auto auto auto;
+    grid-template-columns: 140px auto auto auto auto;
     grid-template-areas: 
-        'head head head head'
-        'men abt abt abt'
-        'men res res res'
-        'men pub pub pub'
-        'men cv cv cv'
-        'men sk1 sk2 sk3'
-        'men ct ct ct'
-        'men p p p'
+        'head head head head head'
+        'men abt abt abt abt'
+        'men res res res res '
+        'men pub pub pub pub'
+        'men cv cv cv cv'
+        'men sk1 sk1 sk2 sk2'
+        'men ct ct ct ct'
+        'men p p p p'
         ;
     }
     img.gallery {
@@ -414,7 +412,7 @@ div.sk {
         z-index: 5;
     }
     div.nav, div.navtop {
-    max-width: 10%;
+    max-width: 15%;
     padding: 1% 1.5% 1% 1.5%;
     margin: 3px 5px 0px 5px ;
     float: left;
@@ -425,41 +423,39 @@ div.sk {
 
     .grid-layout {
     display:grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     grid-template-areas: 
-        'head head head'
-        'men men men'
-        'abt abt abt'
-        'res res res'
-        'pub pub pub'
-        'cv cv cv'
-        'sk1 sk2 sk3'
-        'ct ct ct'
-        'p p p'
+        'head head'
+        'men men'
+        'abt abt'
+        'res res'
+        'pub pub'
+        'cv cv'
+        'sk1 sk2'
+        'ct ct'
+        'p p'
         ;
     max-width: 100%;
     margin-left: 0;
     }
     .date {
-        max-width: 14%;
-        left: -18%;
-        top: -1%;
+        max-width: 25%;
+        left: -33%;
+        top: -0.5;
     }
 
     .timeline {
-        left: -10%;
+        left: -15%;
     }
     .subcontent .date {
-        max-width: 15%;
-        left: -24%;
+        max-width: 22.5%;
+        left: -38%;
     }
     .content {
-        max-width: 99%;
+        max-width: 95%;
     }
-    .grid-layout {
+    .sk1, .sk2{
         max-width: 100%;
-    }
-    .header {
     }
 
 }
