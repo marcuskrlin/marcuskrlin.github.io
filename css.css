@@ -55,7 +55,7 @@ h1, p {
         'men res res res res p'
         'men pub pub pub pub p'
         'men cv cv cv cv p'
-        'men sk1 sk1 sk2 sk2 p'
+        'men sk1 sk1 sk1 sk1 p'
         'men ct ct ct ct p'
         ;
     max-width: calc(100%-80px);
@@ -88,8 +88,8 @@ h1, p {
 .sk1 { 
     grid-area: sk1; 
 }
-.sk2 { 
-    grid-area: sk2; 
+.sk1 { 
+    grid-area: sk1; 
 }
 
 .pub { 
@@ -97,7 +97,6 @@ h1, p {
 }
 .contact { 
     grid-area: ct; 
-    height: 400px;
 }
 
 
@@ -246,7 +245,6 @@ p.desc {
     padding: 0 0 1px 18px;
     top: 5px;
     position: relative;
-    max-width: 90%;
     left: 10px;
     margin-top: 10px;
     font-family: montserrat;
@@ -268,8 +266,8 @@ p.desc {
 .date {
     position: absolute;
     width: 30%;
-    max-width: 180px;
-    left: -212px;
+    max-width: 155px;
+    left: -180px;
     top: 2px;
     color: var(--tlcolor);
     font-family: monospace;
@@ -297,8 +295,10 @@ p.desc {
     z-index: 1;
 }
 .subcontent .date {
-    left: -234px;
-    max-width: 180px;
+    position: absolute;
+    left: -195px;
+        width: 25%;
+    max-width: 140px;
     top: 0;
     font-size: 12px;
     text-align: right;
@@ -386,7 +386,7 @@ div.sk {
         'men res res res res '
         'men pub pub pub pub'
         'men cv cv cv cv'
-        'men sk1 sk1 sk2 sk2'
+        'men sk1 sk1 sk1 sk1'
         'men ct ct ct ct'
         'men p p p p'
         ;
@@ -412,15 +412,16 @@ div.sk {
         z-index: 5;
     }
     div.nav, div.navtop {
-    max-width: 15%;
+    max-width: 20%;
     padding: 1% 1.5% 1% 1.5%;
-    margin: 3px 5px 0px 5px ;
+    margin: 3px 5px 3px 5px ;
     float: left;
     }
     div.subnav {
         display: none;
     }
-
+    div.navtop {
+    }
     .grid-layout {
     display:grid;
     grid-template-columns: auto auto;
@@ -431,33 +432,28 @@ div.sk {
         'res res'
         'pub pub'
         'cv cv'
-        'sk1 sk2'
+        'sk1 sk1'
         'ct ct'
         'p p'
         ;
     max-width: 100%;
     margin-left: 0;
     }
-    .date {
-        max-width: 25%;
-        left: -33%;
-        top: -0.5;
-    }
-
     .timeline {
-        left: -15%;
+        margin: 5px 0 0 0px;
     }
-    .subcontent .date {
-        max-width: 22.5%;
-        left: -38%;
+    /*make it so that dates are in line with content*/
+    .date, .subcontent .date {
+        position: relative;
+        width: 100%;
+        text-align: left;
+        left: 0px;
+        margin-top: 10px;
     }
-    .content {
-        max-width: 95%;
+    img.gallery {
+    margin-bottom: 10px;
+    max-width: 90%;
     }
-    .sk1, .sk2{
-        max-width: 100%;
-    }
-
 }
 
 
