@@ -32,3 +32,6 @@ function filt(poop) {
         $(text).fadeToggle();
     }
 }
+
+//ACTIVE SCROLL
+    

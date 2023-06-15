@@ -26,9 +26,9 @@
             </div>
         </div>
         <div class="sticky_menu">
-	<a href="#top" class="nav">
+	<a href="#top" class="navtop">
         <div class = "navtop">
-        SEND ME BACK UP!
+        Top
         </div>
     </a>
 	<a href="#about_me" class="nav">
@@ -41,26 +41,12 @@
         RESEARCH
         </div>
     </a>
-        <a href="#pubs" class="nav">
-            <div class = "subnav">
-            PUBS
-            </div>
-        </a>
+
 	<a href="#cv" class="nav">
         <div class = "nav">
         CV
         </div>
     </a>
-        <a href="#exp" class="nav">
-            <div class = "subnav">
-            EXP
-            </div>
-        </a>
-        <a href="#skills" class="nav">
-            <div class = "subnav">
-            SKILL
-            </div>
-        </a>
 	<a href="#contact" class="nav">
         <div class = "nav">
         CONTACT
@@ -75,7 +61,7 @@
             <img src="ski.jpg" class = "gallery" alt="Top of Lake Louise">
             <img src="IMG_5232.jpg" class = "gallery" alt="Snake (hand only)">
         </div>
-        <div class="aboutme main" id="about_me">
+        <div class="aboutme main s1" id="about_me">
             <h2>About Me</h2>
             <img class="inline" src="aboutme.png" style="height: 20vh">
             <p>Hi! My name's Marcus and I'm a scientist that really likes seaweed!</p>
@@ -86,7 +72,7 @@
             <br>
             <p>Aside from science (or science-adjacent things), I am an ex-ski instructor from Lake Louise; a former students events planner; an amateur web developer (I built this from scratch! - I'm too cheap to pay for squarespace), an ex-barback, an aquarist/aquaculturist, and love teaching others about marine science! I'm very much a jack of all trades, master of none and am always looking for opportunities to flex my non-science muscles once in a while.</p>
         </div>  
-        <div class="research main" id="research">
+        <div class="research main s2" id="research">
             <h2>Research</h2>
             <p>For past work, please refer to the descriptions in the CV - I go much more in depth there!</p>
             <br>
@@ -94,15 +80,13 @@
             <br>
             <img src="IMG_0793.jpg"  style="height: 200px;">
             <img src="IMG_2231.JPG"  style="height: 200px;">
-        </div>
-        <div class="pub main" id="pubs">    
             <h3>Publications</h3>
             <p style="font-size: 10px; text-align: center">*indicates co-first authorship</p>
             <p class = "pubs">Barbee, B.E.*, <b>Lin, M.K.R.*</b>, Min, I.A.*, Takenami, A.M.*, Philson, C.S. and Blumstein, D.T. (2022), Nutrient enrichment alters risk assessment in Giant clams. J Zool. <a href="https://doi.org/10.1111/jzo.13030">https://doi.org/10.1111/jzo.13030</a></p>
-        </div>  
-        <div class="cv main" id="cv">
+        </div> 
+        <div class="cv main s1" id="cv">
             <h2>Curriculum Vitae</h2>
-            <h3 id="exp">Work & Research Experience</h3>
+            <h3>Work & Research Experience</h3>
                 <!--Experience Filtering CV-->
                 <div id="myBtnContainer">
                   <button class="btn active b1" onclick="filt('all')"> Show Me Everything!</button>
@@ -241,9 +225,7 @@
                         <p class="desc">On a small island called Nosy Komba, I helped manage, then subsequently took over management, a group of 20-30 volunteers in the forest conservation program. I surveyed the biodiversity of the island's secondary forests, helped develop an agroforestry program, collected geospatial data on our sites, and trained volunteers/locals on our monitoring protocols. Included were black lemurs, herpetofauna, lepidoptera, and birds.</p>
                     </div>
                 </div>
-            <h3 style="margin-top: 15px;" id="skills">Skills & Such</h3>
-        </div>
-        <div class="sk1 sk main">
+            <h3 style="margin-top: 15px;">Skills & Such</h3>
             <h4>Languages</h4>
             <ul>
                 <li>Chinese - Mandarin</li>
@@ -273,7 +255,7 @@
             </ul>
             </ul>
         </div>
-        <div class="contact main" id="contact">
+        <div class="contact main s2" id="contact">
             <h2>Contact</h2>
             <p style="text-align: center; margin: 10px;">Email: marcuslin@g.ucla.edu</p>
         </div>  
@@ -289,6 +271,49 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }    
+
+    
+$(document).ready(function() {
+		$('a[href*=#]').bind('click', function(e) {
+				e.preventDefault(); // prevent hard jump, the default behavior
+
+				var target = $(this).attr("href"); // Set the target as variable
+
+				// perform animated scrolling by getting top-position of target-element and set it as scroll target
+				$('html, body').stop().animate({
+						scrollTop: $(target).offset().top
+				}, 600, function() {
+						location.hash = target; //attach the hash (#jumptarget) to the pageurl
+				});
+
+				return false;
+		});
+});
+
+$(window).scroll(function() {
+		var scrollDistance = $(window).scrollTop();
+    
+        if(screen.width <= 950) {
+            scrollDistance = scrollDistance +50;
+        }
+
+		// Show/hide menu on scroll
+		//if (scrollDistance >= 850) {
+		//		$('nav').fadeIn("fast");
+		//} else {
+		//		$('nav').fadeOut("fast");
+		//}
+	
+		// Assign active class to nav links while scolling
+		$('.main').each(function(i) {
+				if ($(this).position().top <= scrollDistance) {
+						$('.sticky_menu a.nav div.active').removeClass('active');
+						$('.sticky_menu a.nav div').eq(i).addClass('active');
+				} else if ($('.aboutme').position().top >= scrollDistance) {
+                           $('.sticky_menu a.nav div.active').removeClass('active');
+                           }
+		});
+}).scroll();
 </script>
 </body>
 </html>
