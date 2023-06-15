@@ -370,20 +370,20 @@ p.desc {
 }
 
 /*ACTIVE BUTTON COLORS*/
-.btn.active:after {
+.btn.navactive:after {
     top: 0px;
     left: 0px;
 }
-.btn.active.b2:after {
+.btn.navactive.b2:after {
     background-color: palegreen;   
 }
-.btn.active.b3:after {
+.btn.navactive.b3:after {
     background-color: pink;   
 }
-.btn.active.b4:after {
+.btn.navactive.b4:after {
     background-color: powderblue;   
 }
-.btn.active.b5:after {
+.btn.navactive.b5:after {
     background-color: lightgoldenrodyellow;   
 }
 
