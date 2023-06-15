@@ -89,7 +89,7 @@
             <h3>Work & Research Experience</h3>
                 <!--Experience Filtering CV-->
                 <div id="myBtnContainer">
-                  <button class="btn active b1" onclick="filt('all')"> Show Me Everything!</button>
+                  <button class="btn navactive b1" onclick="filt('all')"> Show Me Everything!</button>
                   <button class="btn b2" onclick="filt('bio')"> Biology</button>
                   <button class="btn b3" onclick="filt('chem')"> Geochemistry</button>
                   <button class="btn b4" onclick="filt('aqua')"> Aquaculture & Outreach</button>
@@ -266,9 +266,9 @@ var btnContainer = document.getElementById("myBtnContainer");
 var btns = document.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace("active", "");
-    this.className += "active";
+    var current = document.getElementsByClassName("navactive");
+    current[0].className = current[0].className.replace(" navactive", "");
+    this.className += " navactive";
   });
 }    
 
