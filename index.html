@@ -266,9 +266,9 @@ var btnContainer = document.getElementById("myBtnContainer");
 var btns = document.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+    var current = document.getElementsByClassName("navactive");
+    current[0].className = current[0].className.replace("navactive", "");
+    this.className += "navactive";
   });
 }    
 
