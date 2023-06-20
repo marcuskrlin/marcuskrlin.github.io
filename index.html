@@ -57,18 +57,31 @@
 </div>
         <div class="photos">
             <h2 class="gal_title">Gallery</h2>
-            <img src="IMG-2558.JPEG" class = "gallery" alt="Marcus Holding Kelp">
-            <img src="IMG_1271.JPG" class = "gallery" alt="Goechem work Tina">
-            <img src="IMG_2729.JPG" class = "gallery" alt="Diving mada">
-            <img src="IMG-7640.jpg" class = "gallery" alt="Cleaning Tanks">
-            <img src="ski.jpg" class = "gallery" alt="Top of Lake Louise">
-            <img src="IMG_5232.jpg" class = "gallery" alt="Snake (hand only)">
+            <!--flex box for photo gallery, responsive grid-->
+            <div class="row">
+                <div class="column">
+                    <img src="IMG-2558.JPEG" class = "gallery" alt="Marcus Holding Kelp">
+                    <img src="ski.jpg" class = "gallery" alt="Top of Lake Louise">
+                </div>
+                <div class="column">
+                    <img src="IMG_1271.JPG" class = "gallery" alt="Geochem work Tina">
+                    <img src="IMG-7640.jpg" class = "gallery" alt="Cleaning Tanks">
+                </div>
+                <div class="column">
+                    <img src="IMG_2729.JPG" class = "gallery" alt="Diving mada">
+                    <img src="IMG_5232.jpg" class = "gallery" alt="Snake (hand only)">
+                </div>
+                <div class="column picoverflow">
+                    <img src="IMG_2231.jpg" class = "gallery" alt="Snake">
+                    <img src="IMG_1234.jpg" class = "gallery" alt="ORCA beach cleanup">
+                </div>
+            </div>
         </div>
         <div class="aboutme s1" id="about_me">
             <div class="main">
                 <h2>Who Am I?</h2>
             </div>
-            <img class="inline" src="aboutme.png" style="height: 25vh; min-height: 230px;">
+            <img class="inline" src="aboutme.png" style="height: 25vh; min-height: 180px;">
             <p>Hi! My name's Marcus and I'm a scientist that really likes seaweed!</p>
             <br>
             <p>I graduated from the University of California, Los Angeles in 2022 with a B.Sc. in Ecology, Evolution, & Behavior and will be pursuing a M.Sc. in Earth & Planetary Sciences at McGill University. I'm currently co-advised by Dr. Nagissa Mahmoudi and Dr. Rowan Barrett.</p>
@@ -87,9 +100,10 @@
             <div class="main">
                 <h2>Things That Interest Me</h2>
             </div>
-                <img src="IMG_0793.jpg" style="float: right; height: 25vh; min-height: 200px; margin-left: 20px;">
+                <img src="IMG_0793.jpg" style="float: right; height: 17vh; min-height: 120px; margin-left: 20px;">
             <p>I've worked in a number of different environments with a a variety of species. From the secondary forests in Madagascar; the Central Pacific Ocean in French Polynesia; the Eastern Pacific in Southern California; to (hopefully!) the Atlantic in Eastern Canada, I've worked on herpetofauna (reptiles/amphibians); lepidopterans (butterflies/moths); stony corals; estuarine fish; and most importantly— macroalgae!</p>
             <br>
+            <img src="IMG_4734.jpg" style="float: left; height: 17vh; min-height: 155px; margin-right: 20px;">
             <p>Besides culturing seaweeds, I'm most familiar with the fate of nitrogen and sulfur in marine environments (primarily in anaerobic sediments) and geospatial information systems (GIS) as it pertains to California geomorphology. I have some background of stony coral larval proteomics, behavioral ecology, and general molecular biology. For past work, please refer to the descriptions in the CV - I go much more in depth there!</p>
             <br>
             <p>Currently, I work on the associated surface microbiome of giant kelp sporophytes from a farm in Santa Barbara and compare differences in the microbial community structure across different measured traits. I aim to take this work with me to McGill University to further examine the microbiome of seaweeds local to the Atlantic such as sugar kelp (<i>Saccharina latissma</i>) winged kelp, <i>(Alaria esculenta)</i>, or dulse (<i>Palmaria palmata</i>).</p>
