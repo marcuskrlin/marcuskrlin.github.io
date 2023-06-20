@@ -11,6 +11,7 @@ body {
 
 body.theme1 {
     --darker: rgb(24, 38, 23);
+    --lighter: rgb(124, 138, 123, 0.8);
     --darkernav: rgb(24, 38, 23, 0.8);
     --navback: rgb(134, 183, 83, 0.45);
     --header: url(IMG_0720.JPG);
@@ -24,6 +25,7 @@ body.theme1 {
 
 body.theme2 {
     --darker: rgb(93, 84, 111);
+    --lighter: rgb(193, 184, 211, 0.8);
     --darkernav: rgb(93, 84, 111, 0.8);
     --navback: rgb(234, 135, 146, 0.4);
     --header: url(IMG_1231.JPG);
@@ -36,6 +38,7 @@ body.theme2 {
 
 body.theme3 {
     --darker: rgb(35, 48, 63);
+    --lighter: rgb(135, 148, 163, 0.8);
     --darkernav: rgb(35, 48, 63, 0.8);
     --navback: rgb(120, 168, 215, 0.4);
     --header: url(boat.JPG);
@@ -54,7 +57,7 @@ h1, p {
 
 .grid-layout {
     display:grid;
-    grid-template-columns: 140px auto auto auto auto 25%;
+    grid-template-columns: 140px auto auto auto auto 15%;
     grid-template-areas: 
         'head head head head head head'
         'men abt abt abt abt p'
@@ -77,7 +80,7 @@ h1, p {
 }
 
 .grid-layout > div.s2 {
-    background-color: var(--content2);
+    background-color: var(--content1);
 }
 
 .grid-layout > div.photos {
@@ -93,10 +96,10 @@ h1, p {
 }
 .research { 
     grid-area: res; 
-    text-align: center
 }
 .cv { 
     grid-area: cv; 
+    min-height: 90vh;
 }
 .sk1 { 
     grid-area: sk1; 
@@ -142,22 +145,56 @@ h1 {
 /*Titles for different sections*/
 h2,h3 {
     text-align: center;
-    margin: 5px;
+    margin: 15px;
 }
 /*Only used in CV Skills section*/
 h4 {
     text-align: center;
     margin: 0;
 }
+/*Gallery title hidden at max width, will show itself at smaller sizes*/
+.gal_title {
+    display: none;
+}
+/*Dividers for sections*/
+.main {
+    display: flex;
+    align-items: center;
+}
+.main:before, .main:after {
+    flex: 1;
+    content: '';
+    padding: 2px;   
+    background-color: var(--darkernav);
+    margin: 5px;
+    border-radius: 25px;
+}
+.submain {
+    display: flex;
+    align-items: center;
+}
+.submain:before, .submain:after {
+    flex: 1;
+    content: '';
+    padding: 1px;   
+    background-color: var(--lighter);
+    margin: 10px;
+    margin-left: 10%;
+    border-radius: 25px;
+}
+.submain:after {
+    margin-left: 10px;
+    margin-right: 10%;
+}
 
 /*Image formatting*/
-img.inline {
+.inline {
     float: left;
     margin: 8px;
 }
 
 img.noinline {
-    float: none;
+    position: static;
     margin: 8px;
 }
 
@@ -201,7 +238,8 @@ div.nav {
 }
 
 div.sticky_menu a > div.active {
-    background: coral;
+    outline: 3px solid coral;
+    color: coral;
 }
 
 div.subnav {
@@ -420,7 +458,19 @@ div.sk {
     .photos {
         text-align: justify;
     }
+    .cv {
+    min-height: 0vh;
+    }
+    /*so that Gallery title shows up at the bottom*/
+    .gal_title {
+        display: block;
+    }
+    .photos {
+        font-family: 'Montserrat';
+        background-color: var(--content1);
+    }
 }
+
 
 @media only screen and (max-width:950px) {
     body {
